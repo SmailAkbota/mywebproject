@@ -1,0 +1,36 @@
+.container{
+    width: 400px;
+    padding: 50px;
+    border:1px solid black;
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    top:50%;
+    left:30%;
+    background-color: aliceblue;
+    border-radius: 15%;
+}
+.roller {
+    width: 70%;
+    display: flex; /* Use flexbox to align dice images horizontally */
+    justify-content: space-around; /* Add space between dice images */
+}
+
+.roller img {
+    width: 100px; /* Control the width of dice images */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 100px;
+}
+button{
+    background-color: aqua;
+    font-size: 16px;
+    padding: 15px 30px;
+    color:wheat;
+    width: 150px;
+    letter-spacing: 1.2px;
+    display: flex;
+    align-self: center;
+    margin-top: 20px;
+    
+}

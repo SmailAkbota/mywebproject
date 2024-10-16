@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Rolling Game</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <style>
+        body {
+            display: flex;
+            flex-direction: column; /* Stack content vertically */
+            align-items: center; /* Center content vertically */
+            height: 100vh; /* Full height of the viewport */
+            margin: 0; /* Remove default margin */
+            background: linear-gradient(yellow, coral);
+            background-size: 100%;
+        }
+        img {
+            border-radius: 10%;
+            width: 400px;
+            height: auto; /* Maintain aspect ratio */
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div class="row">
+            <div class="col-6">
+                <img src="images/DiceRollingGame.png" alt="main image of Dice Rolling Game">
+            </div>
+        </div>
+        <div class="container">
+            <div class="roller">
+                <img src="images/dice1.png" id="die-1">
+                <img src="images/dice2.png" id="die-2">
+            </div>
+            <button id="rollButton">Roll The Dice</button>
+
+            <!-- Add these elements for displaying the sum, rolls, and message -->
+            <p id="sum">Sum: 0</p>
+            <p id="counter">Rolls: 0</p>
+            <p id="message"></p>
+        </div>
+    </div>
+<script src="script.js"></script>
+</body>
+</html>
