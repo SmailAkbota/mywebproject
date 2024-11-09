@@ -1,0 +1,70 @@
+body, html {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0; 
+}
+
+
+.container {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    width: 400px; 
+    padding: 20px; 
+    border-radius: 12px; 
+    background: linear-gradient( green, black); 
+    color: white; 
+    font-size: 24px; 
+}
+
+
+.gradient-box {
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row; 
+    gap: 20px; 
+    width: 100%; /
+}
+
+
+.image {
+    margin-top: 10px; 
+    display: flex;
+    justify-content: center; 
+}
+.gradient-box i {
+    cursor: pointer; 
+}
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+.icons {
+    display: flex; 
+    gap: 20px;    
+}
+#progres{
+    -webkit-appearance: none;
+    width: 80%;
+    height: 6px;
+    background: palevioletred;
+    cursor: pointer;
+    
+
+}
+#progres::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background: navy;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    box-shadow: 0 5px 5px rgb(red, green, blue);
+}

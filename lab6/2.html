@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music-Play</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       
+        <div class="gradient-box">
+            <i class="fa-regular fa-heart"></i>
+        </div>
+
+     
+        <div class="image">
+            <img src="images.jpeg" class="song" alt="Song Cover" style="width: 200px; height: auto; border-radius: 8px;">
+        </div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        
+        <audio id="song">
+            <source src="easy.mp3">
+           
+        </audio>
+
+        
+        <input type="range" value="0" id="progres">
+
+        <div class="controls">
+            <div class="icons">
+                <i class="fa-solid fa-backward"></i>
+                <i class="fa-solid fa-play" id="cntrlIcons"></i>
+                <i class="fa-solid fa-forward"></i>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        let progres = document.getElementById("progres");
+        let song = document.getElementById("song");
+        let cntrlIcons = document.getElementById("cntrlIcons");
+
+        
+        song.onloadeddata = function() {
+            progres.max = song.duration;
+        };
+
+        song.ontimeupdate = function() {
+            progres.value = song.currentTime;
+        };
+
+   
+        cntrlIcons.onclick = function() {
+            if (song.paused) {
+                song.play();
+                cntrlIcons.classList.remove("fa-play");
+                cntrlIcons.classList.add("fa-pause");
+            } else {
+                song.pause();
+                cntrlIcons.classList.remove("fa-pause");
+                cntrlIcons.classList.add("fa-play");
+            }
+        };
+
+        progres.oninput = function() {
+            song.currentTime = progres.value;
+        };
+    </script>
+</body>
+</html>
